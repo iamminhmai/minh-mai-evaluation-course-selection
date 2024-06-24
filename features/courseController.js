@@ -14,11 +14,13 @@ class CourseController {
 
     fetchCourses() {
         courseAPI.fetchCoursesAPI().then((courses) => {
-            // this.#model.setCourses(courses);
+            this.#model.setCourses(courses);
             courses.forEach((course) => {
                 this.#view.renderCourse(course)
             });
         });
     }
-
+    handleSelectConfirmation() {
+        this.#view.moveSelectedCourses();
+    }
 }

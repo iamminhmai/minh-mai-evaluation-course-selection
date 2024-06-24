@@ -1,5 +1,6 @@
 class CourseModel {
     #courses;
+    
     constructor() {
         this.#courses = [];
     }
@@ -8,5 +9,3 @@ class CourseModel {
         this.#courses = courses;
     }
 }
-
-

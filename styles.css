@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
 h1, h3 {
@@ -15,6 +17,7 @@ button {
     padding: 5px;
 }
 
+/* Container styles */
 .container {
     max-width: 600px;
     margin: 20px auto;
@@ -24,13 +27,16 @@ button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.course-list li {
+/* Course list and buckets */
+.course-list {
     list-style-type: none;
+    padding: 0;
 }
 
 .buckets {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .bucket {
@@ -42,17 +48,23 @@ button {
     overflow-y: auto;
 }
 
-.selected {
-    background-color: deepskyblue;
-    color: #fff;
-}
-
+/* Course item styles */
 .course-item {
     text-align: center;
+    background-color: white;
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
+}
+
+.course-item:nth-child(even) {
+    background-color: rgb(221, 239, 221); /* Alternate background color for even items */
+}
+
+/* Selected course style */
+.selected {
+    background-color: deepskyblue !important;
+    border: 1px solid black;
+}

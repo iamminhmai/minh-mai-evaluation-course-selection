@@ -6,12 +6,11 @@ class CourseView {
         this.selectButton = document.getElementById("select-btn");
         this.totalCredits = 0; // Initial total credits count
 
-
         // Event listener for handling click events on course items
         this.availableCoursesContainer.addEventListener('click', (event) => {
             let courseItem = event.target.closest('.course-item');
             if (courseItem) {
-              this.toggleCourseSelection(courseItem);
+                this.toggleCourseSelection(courseItem);
             }
         });
 
@@ -79,11 +78,13 @@ class CourseView {
         }
     }
 
-    disableSelectButton() {
-        this.selectButton.disabled = true;
-    }
+    moveSelectedCourses() {
+        const selectedCourses = Array.from(this.availableCoursesContainer.querySelectorAll('.course-item.selected'));
+        selectedCourses.forEach(course => {
+            this.selectedCoursesContainer.appendChild(course);
+            course.classList.remove('selected');
+        });
 
-    enableSelectButton() {
-        this.selectButton.disabled = false;
+        this.selectButton.setAttribute('disabled', 'disabled');
     }
 }
