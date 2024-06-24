@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection App</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main>
+        <h1>Class Selection Page</h1>
+        <section class="container">
+            <div class="buckets">
+                <div class="available-courses bucket">
+                    <h3>Available Courses</h3>
+                    <div id="available-courses-list" class="course-list">
+                    </div>
+                </div>
+                <div class="selected-courses bucket">
+                    <h3>Selected Courses</h3>
+                    <ul id="selected-courses-list" class="course-list">
+       
+                    </ul>
+                </div>
+            </div>
+            <div class="total-credits">
+                <h3>Total Credits: <span id="total-credits-count">0</span></h3>
+            </div>
+            <button id="select-btn">Select</button>
+        </section>
+    </main>
+    <script src="./api/courseAPI.js"></script>
+    <script src="./features/courseView.js"></script>
+    <script src="./features/courseModel.js"></script>
+    <script src="./features/courseController.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
